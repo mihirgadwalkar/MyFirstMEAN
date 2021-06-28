@@ -124,7 +124,7 @@ userApi.post('/login', expressErrorHandler(async (req, res) => {
         else {
             //create token
             let signedToken = jwt.sign({ username: credentials.username }, 'abcdef', { expiresIn: 120 })
-            res.send({ message: "Login Successful", token: signedToken, username: credentials.username })
+            res.send({ message: "Login Successful", token: signedToken, username: credentials.username, userObj: user })
         }
     }
 }))

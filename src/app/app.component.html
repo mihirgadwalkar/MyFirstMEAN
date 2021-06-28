@@ -1,28 +1,30 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar navbar-expand-sm bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">MyFirstMEAN</a>
+    <a href="http://localhost:3236/home">
+      <img class="logo" src="https://banner2.cleanpng.com/20180712/jry/kisspng-logo-brand-font-pms-5b47c355e40e72.9871881615314297179341.jpg" alt="" >
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto mb-2">
         <li class="nav-item">
-          <a class="nav-link " routerLink="home" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</a>
+          <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" routerLink="register" routerLinkActive="active">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="register" routerLinkActive="active" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Register</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="login" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Login</a>
+          <a class="nav-link " routerLink="login" routerLinkActive="active">Login</a>
         </li>
       </ul>
+
     </div>
   </div>
 </nav>
 
-
-
+<!-- nest products component -->
 <div class="container">
   <router-outlet></router-outlet>
 </div>

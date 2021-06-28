@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   onLogin(userCredentials){
     this.us.loginUser(userCredentials).subscribe(
       res=>{
-        if(res.message==="login success"){
+        if(res.message==="Login Successful"){
           //save token to localstorage
           localStorage.setItem("token",res.token)
           localStorage.setItem("username",res.username)

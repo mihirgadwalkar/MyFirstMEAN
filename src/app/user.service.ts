@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserService {
-
+  //inject http client object
   constructor(private hc:HttpClient) { }
 
   createUser(userObj):Observable<any>{

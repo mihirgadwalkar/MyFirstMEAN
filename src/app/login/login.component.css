@@ -1,0 +1,13 @@
+.sidenav {
+    background-color: #000;
+}
+
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}

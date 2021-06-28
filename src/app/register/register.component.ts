@@ -18,9 +18,9 @@ export class RegisterComponent implements OnInit {
     this.us.createUser(userObj).subscribe(
       res=>{
         if(res.message==="User created"){
-          alert("User created")
+          alert("User Created")
           //navigate to login component
-            this.router.navigateByUrl("/login")
+          this.router.navigateByUrl("/login")
         }
         else{
           alert(res.message)
