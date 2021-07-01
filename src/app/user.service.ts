@@ -6,6 +6,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserService {
+
+  userLoginStatus =  false;
   //inject http client object
   constructor(private hc:HttpClient) { }
 

@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserprofileComponent implements OnInit {
 
+  userObj;
   constructor() { }
 
   ngOnInit(): void {
+    //get user object from local storage
+    this.userObj=JSON.parse(localStorage.getItem("userObj"))
   }
 
 }
