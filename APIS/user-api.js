@@ -8,6 +8,7 @@ const expressErrorHandler = require("express-async-handler")
 const bcryptjs = require("bcryptjs")
 //importing jwt
 const jwt = require("jsonwebtoken")
+const checkToken=require("./middlewares/verifyToken")
 //add body parsing middleware
 userApi.use(exp.json())
 
@@ -123,11 +124,16 @@ userApi.post('/login', expressErrorHandler(async (req, res) => {
         }
         else {
             //create token
-            let signedToken = jwt.sign({ username: credentials.username }, 'abcdef', { expiresIn: 120 })
+            let signedToken = jwt.sign({ username: credentials.username }, 'abcdef', { expiresIn: 10 })
             res.send({ message: "Login Successful", token: signedToken, username: credentials.username, userObj: user })
         }
     }
 }))
+
+//dummy route to create protected resource
+userApi.get("/testing",checkToken,(req,res)=>{
+    res.send({message:"This is protected data"})
+})
 
 //export
 module.exports = userApi;
